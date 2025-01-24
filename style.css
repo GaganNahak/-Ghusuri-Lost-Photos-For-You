@@ -1,0 +1,109 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+#button{
+position: fixed;
+top: 20px;
+z-index: 1;
+background: rgba(0, 0, 0, 0.74);
+height: 30px;
+width: 50px;
+border-radius: 20px;
+border: none;
+}
+#parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+#container{
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 270px;
+    /* flex-direction: column; */
+    
+    object-fit: contain;
+    margin-right: 50px;
+}
+.img{
+    height: fit-content;
+    width: 300px;
+    object-fit: contain; 
+    margin-bottom: 20px; 
+box-shadow: 0px 0px 20px rgb(27, 18, 18);
+    animation: show   linear    ;
+    animation-timeline: view();
+    animation-range:  0% cover 50%;
+    /* animation: hide linear;
+    animation-timeline: view();
+    animation-range: 90% cover 210%; */
+}
+
+#last{
+    animation: show   linear    ;
+    animation-timeline: view();
+    animation-range:  0% cover 25%; 
+    margin-bottom: 80px;
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+        scale: 0.1;
+        box-shadow: 0px 0px 0px 20px rgb(0, 255, 204);
+    }
+    30%{
+        box-shadow: 0px 0px 0px 20px rgb(0, 255, 204);
+    }
+    70%{
+        box-shadow: 0px 0px 0px 20px rgba(0, 255, 204, 0);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+   /* 100%{
+    opacity: 0;
+    scale: 0.5;
+   }  */
+}
+/* @keyframes hide {
+    0%{
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0.1;
+    }
+  
+} */
+ .container_dar{
+    display: flexbox;
+    align-items: center;
+    background:black;
+    justify-content: center;
+    /* height: 600px;
+    width: 270px; */
+    object-fit: contain;
+   
+}
+.img-dark{
+    height: fit-content;
+    width: 300px;
+    object-fit: contain; 
+    margin-bottom: 20px; 
+box-shadow: 0px 0px 20px rgb(245, 245, 245);
+    animation: show   linear    ;
+    animation-timeline: view();
+    animation-range:  0% cover 50%; 
+}
